@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Promises</title>
+  <script>
+    const github_api = "https://api.github.com/users/adelansilin";
+    async function handlePromise() {
+        try{
+            const  user = await fetch(github_api);
+            const jsonValue = await user.json();
+            console.log(jsonValue);
+        } catch (err){
+            console.log(err);
+        }  
+    }
+    handlePromise();
+     
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
