@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Promises</title>
+  <script>
+    const github_api = "https://api.github.com/users/adelansilin";
+    const  user = fetch(github_api); 
+    console.log("fetch result" ,user);
+    user.then(function(data){
+        console.log(data);
+    })
+    
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
+
+
+
+
