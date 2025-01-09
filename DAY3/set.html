@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Promises</title>
+  <script>
+    const orderSet =  new Set(["pasta","pizza","pizza","pasta","burger","pizza"]);
+    console.log(orderSet);
+    console.log(new Set("Adel"));
+
+    orderSet.add("Sandwich");
+    orderSet.add("chicken roll");
+
+    orderSet.delete("chicken roll");
+
+    console.log(orderSet);
+
+    for (let order of orderSet){
+        console.log(order);
+    }
+
+    const staff = ["waiter" , "chef" , "waiter", "manager", "chef" , "waiter"];
+    const staffUnique = new Set(staff);
+    const staffUniqueArr = [...new Set(staff)];
+    console.log(staffUnique);
+    console.log(staffUniqueArr)
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

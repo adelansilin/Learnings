@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Promises</title>
+  <script>
+    let map = new WeakMap();
+    let user1 = {
+        name : "Adel"
+    }
+    let user2 = {
+        name: "Cynthia"
+    };
+
+    map.set(user1, "Added data for user 1")
+    map.set(user2, "Added data for user 2")
+
+    console.log(map. get(user1));
+
+    user1 = null;
+    console.log(map. get(user1)); 
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

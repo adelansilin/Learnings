@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Promises</title>
+  <script>
+    let set = new WeakSet();
+
+    let user1 = {
+        name:"adel"
+    }
+
+    let user2 = {
+        name : "abel"
+    }
+
+    console.log(set.has(user1));
+
+    user1 = null;
+    console.log(set.has(user1));
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
