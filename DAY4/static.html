@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Class- static</title>
+  <script>
+    class Car {
+  static totalCars = 0;
+
+  constructor(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    Car.totalCars++;
+  }
+
+  getCarDetails() {
+    return `${this.year} ${this.make} ${this.model}`;
+  }
+
+  static getTotalCars() {
+    return Car.totalCars;
+  }
+}
+
+const car1 = new Car("Toyota", "Corolla", 2020);
+const car2 = new Car("Honda", "Civic", 2022);
+
+console.log(car1.getCarDetails());
+console.log(car2.getCarDetails());
+console.log(Car.getTotalCars());
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
+

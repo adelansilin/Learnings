@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>eval</title>
+  <script>
+    class Employee {
+    constructor(name){
+        this.name = name;
+        const skills = new Skills();
+        const payroll = new Payroll();
+        this.addSkills = skills.addSkills.bind(this);
+        this.calculateSalary = payroll.calculateSalary.bind(this);
+    }
+ 
+    showName(){
+        console.log(`I am ${this.name}`);
+    }
+}
+ 
+class Skills {
+    addSkills(skill){
+        console.log(`${this.name} has the skill: ${skill}`);
+    }
+}
+ 
+class Payroll {
+    calculateSalary(hours, rate) {
+        console.log(`Salary for ${this.name}: $${hours * rate}`);
+    }
+}
+ 
+const emp1 = new Employee("Adel Mariam");
+emp1.showName();
+emp1.addSkills("javascript");
+emp1.calculateSalary(2,1000);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

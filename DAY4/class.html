@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Classs</title>
+  <script>
+    class Rectangle{
+        constructor(_width,_height,_color){
+            this.width = _width;
+            this.height = _height;
+            this.color = _color;
+        }
+
+        getArea() {
+            return this.width * this.height;
+        }
+
+        description(){
+            console.log(`This is a rectangle of ${this.width} X ${this.height} and this is a rectangle of ${this.color} color`);
+        }
+    }
+
+    let rect1 = new Rectangle(5,3,"blue");
+    let rect2 = new Rectangle(8,2,"red");
+
+    console.log(rect1.getArea());
+    rect2.description();
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
+

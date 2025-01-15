@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Destructuring of Objects</title>
+  <script>
+    const employee = {
+        id : 1,
+        name : "Adel Mariam",
+        age : 22,
+        department : "Front-end",
+        address : {
+            city : "Coimbatore",
+            state : "Tamil-Nadu",
+            country : "India"
+        },
+    };
+
+    console.log(name);
+    console.log(employee.name);
+    console.log(employee.age);
+    const {name : fullName, age , hobby = "Singing", address : {city,state}} = employee;
+    console.log(fullName);
+    console.log(age);
+    console.log(hobby);
+    console.log(city);
+
+    const displayEmployee = ({name , department, greet = "hi" }) => {
+      console.log (`${greet} ! I am ${name} from ${department} department`);
+    }
+
+    displayEmployee(employee);
+  </script>
+  
+</head>
+<body>
+  
+</body>
+</html>

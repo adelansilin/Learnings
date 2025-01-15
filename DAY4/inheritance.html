@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Class- inheritance</title>
+  <script>
+    class Shape {
+        constructor(name) {
+            this.name = name;
+        }
+
+        displayName() {
+            console.log(`This is a ${this.name}`);
+        }
+        
+        displayArea() {
+            console.log(`Area cannot be calculated for a general shape.`);
+        }
+    }
+    
+    class Rectangle extends Shape {
+        constructor(length, width) {
+            super('Rectangle');
+            this.length = length;
+            this.width = width;
+        }
+        
+        area() {
+            return this.length * this.width;
+        }
+        
+        displayArea() {
+            console.log(`The area of the ${this.name} is: ${this.area()}`);
+        }
+    }
+    
+    class Circle extends Shape {
+        constructor(radius) {
+            super('Circle');
+            this.radius = radius;
+        }
+        
+        area() {
+            return Math.PI * Math.pow(this.radius, 2);
+        }
+        
+        displayArea() {
+            console.log(`The area of the ${this.name} is: ${this.area()}`);
+        }
+    }
+    
+    const rectangle = new Rectangle(5, 3);
+    const circle = new Circle(4);
+    rectangle.displayName();
+    rectangle.displayArea();
+    circle.displayName();
+    circle.displayArea();
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>eval</title>
+  <script>
+class Employee {
+  #salary;
+
+  constructor(name, position, salary) {
+    this.name = name;
+    this.position = position;
+    this.#salary = salary;
+  }
+
+  displayDetails() {
+    console.log(`Employee: ${this.name}, Position: ${this.position}`);
+  }
+
+  updateSalary(newSalary) {
+    if (newSalary > 0) {
+      this.#salary = newSalary;
+      console.log(`Updated salary for ${this.name} to ${this.#salary}`);
+    } else {
+      console.log("Invalid salary amount.");
+    }
+  }
+}
+
+const emp1 = new Employee("Adel", "Developer", 50000);
+emp1.displayDetails();
+
+// console.log(emp1.#salary);
+
+emp1.updateSalary(60000);
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

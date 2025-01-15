@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Destructuring of both arrays and objects</title>
+  <script>
+    const employees = [
+        { empId: 101, name: 'Adel Mariam', dept: 'HR' },
+        { empId: 102, name: 'Abel George', dept: 'Finance' },
+        { empId: 103, name: 'Daisy', dept: 'IT' },
+        { empId: 104, name: 'Ansilin', dept: 'Marketing' },
+        { empId: 105, name: 'Anindita Kannan', dept: 'Sales' }
+    ];
+    
+    const [emp1 ,emp2, , emp3,...rest] = employees;
+    console.log(emp1);
+    console.log(emp3);
+    console.log(rest);
+    const [{ empId: empId1, name: name1, dept: dept1 }, , { empId: empId3, name: name3, dept: dept3 }] = employees;
+    console.log(empId1, name1, dept1);  
+    console.log(empId3, name3, dept3); 
+    
+    //arrays in object
+
+    const employeeData = {
+        empIds: [101, 102, 103, 104, 105],
+        names: ['Adel Mariam', 'Abel George', 'Daisy', 'Ansilin', 'Anindita Kannan'],
+        depts: ['HR', 'Finance', 'IT', 'Marketing', 'Sales'],
+        ages: [25, 28, 30, 26, 27],
+        salaries: [50000, 60000, 70000, 55000, 65000]
+    };
+
+    const {empIds,names} = employeeData;
+    const {empIds : [id1,id2,id3,id4,id5],names : [empn1,,empn3,...rests],depts,ages,salaries} = employeeData;
+    console.log(rests);
+    console.log(id3);
+    console.log(empIds);
+    console.log(ages);
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

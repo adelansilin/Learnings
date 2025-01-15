@@ -8,7 +8,7 @@ function greet(greeting, age) {
   };
   
   const user2 = {
-    name: 'Chai',
+    name: 'jas',
     job: 'Data Scientist',
   };
   

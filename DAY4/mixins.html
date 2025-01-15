@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>mixins</title>
+  <script>
+    class Employee {
+        constructor(name){
+            this.name = name;
+        }
+
+        showName(){
+            console.log(`I am ${this.name}`);
+        }
+    }
+
+    const  Skills = {
+        addSkills(skill){
+            console.log(`${this.name} has the skill: ${skill}`);
+        }
+    }
+
+    const Payroll = {
+        calculateSalary(hours, rate) {
+            console.log(`Salary for ${this.name}: $${hours * rate}`);
+        }
+    }
+
+    Object.assign(Employee.prototype,Skills,Payroll);
+
+    const emp1 = new Employee("Adel Mariam");
+    console.log(emp1.__proto__);
+    emp1.showName();
+    emp1.addSkills("javascript");
+    emp1.calculateSalary(2,1000);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

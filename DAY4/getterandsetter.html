@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Classs</title>
+  <script>
+    class Square {
+        constructor (_width){
+            this.width = _width;
+            this.height = _width;
+            this.numOfReq = 0;
+        }
+
+        get getArea(){
+            this.numOfReq ++ ;
+            return this.width * this.height;
+        }
+
+        set area(area){
+            this.width = Math.sqrt(area);
+            this.height = this.width;
+        }
+    }
+
+    let square1 = new Square();
+    square1.area = 25;
+    console.log(square1.getArea);
+    console.log(square1.width);
+    console.log(square1.height);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
+
