@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>spread-operator deep copying</title>
+  <script>
+    const superhero = {
+        name : "Adel Mariam",
+        alias : "Anindita",
+        universe : "DC",
+        happy : "false",
+        enemies : ["Joker", "catwoman" , "Bane"],
+        bestMovie : {title: "The Dark Knight" , rating: 95},
+    };
+
+    // const superheroCopy = {
+    //     ...superhero,
+    //     enemies:[...superhero.enemies],
+    //     bestMovie: {...superhero.bestMovie, year:2008},
+    // }
+
+    const superheroCopy = JSON.parse(JSON.stringify(superhero));
+
+    superhero.enemies.push("Poison Ivy");
+    superheroCopy.bestMovie.year = 2008;  
+
+    console.log(superhero);
+    console.log(superheroCopy);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

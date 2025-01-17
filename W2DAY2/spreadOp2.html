@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>eval</title>
+  <script>
+    const animal = {
+        name : "Koala",
+        kingdom : "Australia",
+        cute : true,
+        friends : [{name: "Kangaroo", kingdom: "Australia"}],
+    };
+
+    const koala = {
+        ...animal,
+        tail : false,
+    };
+
+    animal.cute = false;
+    animal.friends[0].cute = false;
+    console.log(animal);
+    console.log(koala);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
