@@ -28,6 +28,7 @@
     Object.assign(Employee.prototype,Skills,Payroll);
 
     const emp1 = new Employee("Adel Mariam");
+    console.log(Employee.prototype);
     console.log(emp1.__proto__);
     emp1.showName();
     emp1.addSkills("javascript");
@@ -35,6 +36,6 @@
   </script>
 </head>
 <body>
-  
+               
 </body>
 </html>

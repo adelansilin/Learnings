@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>eval</title>
+  <script>
+    let counter = 0;
+    const getData = function() {
+        console.log("fetching data ..." , counter++);
+    }
+
+    const debounce = function(func, delay) {
+        let timer ;
+        return function (){
+
+            clearTimeout(timer);
+            timer = setTimeout (() => {
+                getData();
+            },delay);
+        }
+    }
+
+    const betterFunction = debounce(getData,500);
+    
+  </script>
+</head>
+<body>
+    <input type = "text" onkeyup="betterFunction()">
+  
+</body>
+</html>

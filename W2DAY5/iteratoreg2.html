@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>eval</title>
+  <script>
+    class NumberList {
+        constructor(){
+            this.numbers = [1,2,3,4];
+        }
+
+        [Symbol.iterator](){
+            const numbers = this.numbers;
+            let currentIndex = -1;
+
+            return{
+                next(){
+                    return{
+                        value: numbers[++currentIndex],
+                        done: currentIndex>=numbers.length
+                    }
+                }
+            }
+        }
+    }
+
+    // const numListIterator = new NumberList()[Symbol.iterator]();
+    // console.log(numListIterator.next());
+    // console.log(numListIterator.next());
+    // console.log(numListIterator.next());
+    // console.log(numListIterator.next());
+    // console.log(numListIterator.next());
+
+    const numList = new NumberList();
+    for(const number of numList){
+        console.log(number);
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
