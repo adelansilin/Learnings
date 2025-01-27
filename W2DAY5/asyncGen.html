@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>eval</title>
+  <script>
+    const generator = async function* (){
+        yield new Promise ((resolve,reject) => {
+          setTimeout (() => {
+            resolve(1);
+          },1000)
+        });
+
+        yield new Promise ((resolve,reject) => {
+          setTimeout (() => {
+            resolve(2);
+          },2000)
+        });
+    };
+
+    const generatorObject = generator();
+    console.log(generator);
+    console.log(generatorObject);
+
+    const asyncGenerator = async () => {
+        for await(const promise of generatorObject){
+        console.log(promise); 
+    }
+    };
+
+    asyncGenerator(); 
+    
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
